@@ -15,15 +15,11 @@
   <%= render 'layouts/header' %>
   <div class = "container">
   <% flash.each do |message_type, message| %>
-    <div class = "alert alert-<%= message_type %>"><%= message %></div>
-    <% end %>
-    <%= yield %>
-    <%= render 'layouts/footer' %>
-    <%
-=begin%>
+  <div class = "alert alert-<%= message_type %>"><%= message %></div>
+  <% end %>
+  <%= yield %>
+  <%= render 'layouts/footer' %>
  <%= debug(params) if Rails.env.development? %> 
-<%
-=end%>
   </div>
    <%= javascript_pack_tag 'application'%>
   </body>
